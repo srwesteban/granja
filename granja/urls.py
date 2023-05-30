@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('mainapp.urls')),
     path('productor/', include('productor.urls')),
     path('recolector/', include('recolector.urls')),
+    path('finca/', include('finca.urls')),
 ]
 
 # ruta imagenes

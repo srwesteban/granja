@@ -22,7 +22,7 @@
               <h3>{{productor.nombres}} {{productor.apellidos}}</h3>
               <h4>C.C {{productor.cedula}}</h4>
               <p>
-                <i class='bx bx-show'></i> <a href="#" class="get-started-btn">Ver Fincas</a><br>
+                <i class='bx bx-show'></i> <a href="{% url 'fincas' productor.pk  %}" class="get-started-btn">Ver Fincas</a><br>
                 <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verproductor' productor.pk %}" class="get-started-btn">Ver Informacion</a>
               </p>
             </div>

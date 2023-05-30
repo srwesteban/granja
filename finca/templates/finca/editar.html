@@ -1,0 +1,81 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+{% load static %}
+
+<script>
+  function eliminarProducto(id, gid=null){
+      Swal.fire({
+          "title":"¿Estas seguro?",
+          "text":"esta acción no se puede deshacer",
+          "icon":"question",
+          "showCancelButton":true,
+          "cancelButtonText":"No , Cancelar",
+          "confirmButtonText":"Si , Eliminar",
+          //"reverseButtons": true,
+          "confirmButtonColor":"#D91B5D"
+      })
+      .then(function(result){
+          if(result.isConfirmed){
+              window.location.href = "/eliminarproducto/"+productor.pk
+          }
+      })
+  }
+</script>
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Editar Finca</h2>
+      <p>Seccion para editar o eliminar el productor</p>
+    </div>
+    <form method="post" class="php-email-form">
+    {% csrf_token %}
+    <div class="row">
+
+      <div class="col-lg-6">
+        
+        <div class="form-group">
+          <h2>Datos Finca</h2>
+        </div>
+        
+        
+        
+      
+    </div>
+
+        <div class="col-lg-6">
+          <div class="form-group">
+            <h2>Datos Finca</h2>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Nombre*" type="text" class="form-control" value="{{finca.nombre}}" name="nombref" id="nombref" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Direccion*" type="text" class="form-control" value="{{finca.direccion}}" name="direccionf" id="direccionf" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="telefono" type="text" class="form-control" value="{{finca.telefono}}" name="telefonof" id="telefonof" >
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="productor" type="text" class="form-control" value="{{finca.productor}}" name="productorf" id="productorf" >
+          </div>
+        
+        </div>
+
+        <div class="text-center"><button type="submit">Editar</button></div>
+        <a class="btn btn-primary me-1" onclick="eliminarProducto({{productor.pk}})" role="button" aria-expanded="false" aria-controls="collapseExample"><i class='bx bx-edit me-1' ></i>Eliminar</a>
+
+      {% comment %} <div class="my-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+      </div> {% endcomment %}
+    </div>
+  </form>
+  </div>
+</section><!-- End Contact Section -->
+
+{% endblock%}

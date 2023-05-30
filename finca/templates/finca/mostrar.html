@@ -7,23 +7,23 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Recolectores</h2>
-        <p>En el carrucel encontrara los Recolectores registrados en el sistema</p>
+        <h2>Fincas de {{productor.nombres}} {{productor.apellidos}}</h2>
+        <p>En el carrucel encontrara las fincas que estan en el sistema</p>
       </div>
 
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
             
-            {% for recolector in recolectores %}
+            {% for finca in fincas %}
 
           <div class="swiper-slide">
             <div class="testimonial-item">
               
-              <h3>{{recolector.nombres}} {{recolector.apellidos}}</h3>
-              <h4>C.C {{recolector.cedula}}</h4>
+              <h3>{{finca.nombre}}</h3>
+              <h4>Direccion {{finca.direccion}}</h4>
               <p>
-                
-                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verrecolector' recolector.pk %}" class="get-started-btn">Ver Informacion</a>
+                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verfinca' finca.pk %}" class="get-started-btn">Ver Informacion</a>
+                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verfinca' finca.pk %}" class="get-started-btn">Agregar finca</a>
               </p>
             </div>
         </div>

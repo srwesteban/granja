@@ -17,7 +17,7 @@ class Productor(models.Model):
         verbose_name_plural = 'Productores'
 
     def __str__(self):
-        return str(self.cedula)
+        return str(self.nombres)
     
     def calcular_edad(self):
         return date.today().year - self.fNacimiento.year
