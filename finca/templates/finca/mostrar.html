@@ -22,8 +22,8 @@
               <h3>{{finca.nombre}}</h3>
               <h4>Direccion {{finca.direccion}}</h4>
               <p>
-                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verfinca' finca.pk %}" class="get-started-btn">Ver Informacion</a>
-                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'verfinca' finca.pk %}" class="get-started-btn">Agregar finca</a>
+                <i class='bx bxs-edit-alt' ></i> <a href="{% url 'add' productor.pk %}" class="get-started-btn">Ver Informacion</a><br>
+                <i class='bx bxs-add-to-queue'></i> <a href="{% url 'verfinca' finca.pk %}" class="get-started-btn">Agregar finca</a>
               </p>
             </div>
         </div>
