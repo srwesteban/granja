@@ -1,0 +1,73 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+{% load static %}
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Productor</h2>
+      <p>Seccion para agregar productor con minimo una finca</p>
+    </div>
+    <form method="post" class="php-email-form">
+    {% csrf_token %}
+    <div class="row">
+
+        <div class="col-lg-6">
+          <div class="form-group">
+            <h2>Datos Productor</h2>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Cedula*" type="text" class="form-control" name="cedula" id="cedula" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Nombres*" type="text" name="nombre" class="form-control" id="nombre" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Apellidos*" type="text" class="form-control" name="apellido" id="apellido" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Telefono*" type="text" class="form-control" name="telefono" id="telefono" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Direccion*" type="text" class="form-control" name="direccion" id="direccion" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Fecha nacimiento*" type="date" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
+          </div>
+          
+        
+        </div>
+
+      <div class="col-lg-6">
+        
+          <div class="form-group">
+            <h2>Datos Finca</h2>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Nombre*" type="text" class="form-control" name="nombref" id="nombref" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="Direccion*" type="text" class="form-control" name="direccionf" id="direccionf" required>
+          </div>
+          <div class="form-group mt-3">
+            <input placeholder="telefono" type="text" class="form-control" name="telefonof" id="telefonof" >
+          </div>
+          
+          
+        
+      </div>
+      <div class="text-center"><button type="submit">Agregar</button></div>
+      {% comment %} <div class="my-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+      </div> {% endcomment %}
+    </div>
+  </form>
+  </div>
+</section><!-- End Contact Section -->
+
+{% endblock%}
