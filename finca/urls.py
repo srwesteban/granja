@@ -6,4 +6,6 @@ urlpatterns = [
     path('add/<int:pk>', views.agregar, name="agregarfinca"),
     path('view/<int:pk>', views.editar, name="verfinca"),
     path('delete/<int:pk>', views.eliminar, name="eliminarfinca"),
+    path('recoleccion/add/<int:pk>', views.agregarRecoleccion, name="agregarrecoleccion"),
+    path('recoleccion/view/<int:pk>', views.mostrarRecoleccion, name="verrecoleccion"),
 ]

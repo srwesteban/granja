@@ -1,0 +1,38 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+{% load static %}
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Finca {{finca.nombre}} </h2>
+        <p>Recoleccion</p>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+            
+            {% for recoleccion in recolecciones %}
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              
+              <h3>{{recoleccion.cantidad}}</h3>
+              <h4>Direccion {{recoleccion.novedad}}</h4>
+              <p>
+                <i class='bx bxs-edit-alt' ></i> <a href="" class="get-started-btn">Ver Informacion</a><br>
+              </p>
+            </div>
+        </div>
+
+            {% endfor %}
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+  {% endblock%}

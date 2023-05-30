@@ -8,7 +8,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Finca</h2>
+      <h2>Recoleccion de Leche</h2>
       <p>Seccion para agregar productor con minimo una finca</p>
     </div>
     <form method="post" class="php-email-form">
@@ -27,20 +27,33 @@
       <div class="col-lg-6">
         
           <div class="form-group">
-            <h2>Datos Finca</h2>
+            <h2>Datos Recoleccion</h2>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Nombre*" type="text" class="form-control" name="nombref" id="nombref" required>
+            <input placeholder="productor" type="text" value="{{fincaE.productor}}" class="form-control" name="productorf" id="productorf" disabled>
+          </div> 
+          <div class="form-group mt-3">
+            <select name="fincaf" class="form-control">
+              {% for finca in fincas %}
+                <option value="{{finca.pk}}" {% if finca.pk == fincaE.pk %} selected {% endif %} >{{finca.nombre}}</option>
+              {% endfor %}
+            </select>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Direccion*" type="text" class="form-control" name="direccionf" id="direccionf" required>
+            <select name="recolectorf" class="form-control">
+              {% for recolector in recolectores %}
+                <option value="{{recolector.pk}}" >{{recolector.nombres}} {{recolector.apellidos}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+          <div class="form-group mt-3">
+            <input placeholder="Cantidad*" type="text" class="form-control" name="cantidadf" id="cantidadf" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="telefono" type="text" class="form-control" name="telefonof" id="telefonof" >
+            <textarea placeholder="novedad" class="form-control" name="novedadf" rows="5" ></textarea>
           </div>
-          <div class="form-group mt-3">
-            <input placeholder="productor" type="text" value="{{productor}}" class="form-control" name="productorf" id="productorf" disabled>
-          </div>          
+                   
         
       </div>
       <div class="text-center"><button type="submit">Agregar</button></div>
