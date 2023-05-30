@@ -72,7 +72,8 @@ def editar(request, pk):
 
     return render(request, 'recolector/editar.html', {
         'title': 'Ver recolector',
-        'recolector': recolector
+        'recolector': recolector,
+        'fecha_nacimiento' : recolector.fNacimiento,
     })
 
 def eliminar(request, pk):

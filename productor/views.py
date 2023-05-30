@@ -79,7 +79,8 @@ def editar(request, pk):
 
     return render(request, 'productor/editar.html', {
         'title': 'Ver Productor',
-        'productor': productor
+        'productor': productor,
+        'fecha_nacimiento' : productor.fNacimiento
     })
 
 def eliminar(request, pk):

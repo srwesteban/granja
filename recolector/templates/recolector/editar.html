@@ -48,25 +48,25 @@
 
         <div class="col-lg-6">
           <div class="form-group">
-            <h2>Datos Productor</h2>
+            <h2>Datos Recolector</h2>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Cedula*" type="text" value="{{productor.cedula}}" class="form-control" name="cedula" id="cedula" required>
+            <input placeholder="Cedula*" type="text" value="{{recolector.cedula}}" class="form-control" name="cedula" id="cedula" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Nombres*" type="text" value="{{productor.nombres}}" name="nombre" class="form-control" id="nombre" required>
+            <input placeholder="Nombres*" type="text" value="{{recolector.nombres}}" name="nombre" class="form-control" id="nombre" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Apellidos*" type="text" value="{{productor.apellidos}}" class="form-control" name="apellido" id="apellido" required>
+            <input placeholder="Apellidos*" type="text" value="{{recolector.apellidos}}" class="form-control" name="apellido" id="apellido" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Telefono*" type="text" value="{{productor.telefono}}" class="form-control" name="telefono" id="telefono" required>
+            <input placeholder="Telefono*" type="text" value="{{recolector.telefono}}" class="form-control" name="telefono" id="telefono" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Direccion*" type="text" value="{{productor.direccion}}" class="form-control" name="direccion" id="direccion" required>
+            <input placeholder="Direccion*" type="text" value="{{recolector.direccion}}" class="form-control" name="direccion" id="direccion" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Fecha nacimiento*" type="date" value="{{productor.fNacimiento}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
+            <input placeholder="Fecha nacimiento*" type="date" value="{{fecha_nacimiento|date:'Y-m-d'}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
           </div>
           
         
@@ -74,7 +74,7 @@
 
         <div class="text-center"><button type="submit">Editar</button></div>
         <a class="btn btn-primary me-1"
-                                    onclick="eliminarProducto({{productor.pk}})"
+                                    onclick="eliminarProducto({{recolector.pk}})"
                                     role="button"
                                     aria-expanded="false"
                                     aria-controls="collapseExample"

@@ -17,7 +17,7 @@
       })
       .then(function(result){
           if(result.isConfirmed){
-              window.location.href = "/eliminarproducto/"+id
+              window.location.href = "/eliminarproducto/"+productor.pk
           }
       })
   }
@@ -66,21 +66,14 @@
             <input placeholder="Direccion*" type="text" value="{{productor.direccion}}" class="form-control" name="direccion" id="direccion" required>
           </div>
           <div class="form-group mt-3">
-            <input placeholder="Fecha nacimiento*" type="date" value="{{productor.fNacimiento}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
+            <input placeholder="Fecha nacimiento*" type="date" value="{{fecha_nacimiento|date:'Y-m-d'}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
           </div>
           
         
         </div>
 
         <div class="text-center"><button type="submit">Editar</button></div>
-        <a class="btn btn-primary me-1"
-                                    onclick="eliminarProducto({{productor.pk}})"
-                                    role="button"
-                                    aria-expanded="false"
-                                    aria-controls="collapseExample"
-                                    ><i class='bx bx-edit me-1' ></i>
-                                    Eliminar
-        </a>
+        <a class="btn btn-primary me-1" onclick="eliminarProducto({{productor.pk}})" role="button" aria-expanded="false" aria-controls="collapseExample"><i class='bx bx-edit me-1' ></i>Eliminar</a>
 
       {% comment %} <div class="my-3">
         <div class="loading">Loading</div>

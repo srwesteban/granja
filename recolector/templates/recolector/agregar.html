@@ -9,7 +9,7 @@
 
     <div class="section-title">
       <h2>Recolectores</h2>
-      <p>Seccion para agregar productor con minimo una finca</p>
+      <p>Seccion para agregar un Recolector</p>
     </div>
     <form method="post" class="php-email-form">
     {% csrf_token %}
@@ -17,7 +17,7 @@
 
         <div class="col-lg-6">
           <div class="form-group">
-            <h2>Datos Productor</h2>
+            <h2>Datos Recolector</h2>
           </div>
           <div class="form-group mt-3">
             <input placeholder="Cedula*" type="text" class="form-control" name="cedula" id="cedula" required>
@@ -45,19 +45,7 @@
         
           <div class="form-group">
             <h2>Datos Finca</h2>
-          </div>
-          <div class="form-group mt-3">
-            <input placeholder="Nombre*" type="text" class="form-control" name="nombref" id="nombref" required>
-          </div>
-          <div class="form-group mt-3">
-            <input placeholder="Direccion*" type="text" class="form-control" name="direccionf" id="direccionf" required>
-          </div>
-          <div class="form-group mt-3">
-            <input placeholder="telefono" type="text" class="form-control" name="telefonof" id="telefonof" >
-          </div>
-          
-          
-        
+          </div>        
       </div>
       <div class="text-center"><button type="submit">Agregar</button></div>
       {% comment %} <div class="my-3">
