@@ -69,8 +69,8 @@
             <input placeholder="Fecha nacimiento*" type="date" value="{{fecha_nacimiento|date:'Y-m-d'}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
           </div>
 
-        <div class="text-center"><button type="submit">Editar</button>
-        <a class="btn btn-primary me-1" onclick="eliminarProducto({{productor.pk}})" role="button" aria-expanded="false" aria-controls="collapseExample"><i class='bx bx-edit me-1' ></i>Eliminar {{productor.pk}}</a>
+        <div class="text-center"><button type="submit"><i class='bx bx-edit me-1' ></i>Editar</button>
+        <a class="btn btn-outline-danger rounded-pill" onclick="eliminarProducto({{productor.pk}})" role="button" aria-expanded="false" aria-controls="collapseExample"><i class='bx bx-trash me-1' ></i>Eliminar {{productor.pk}}</a>
         </div>    
       </div>
       {% comment %} <div class="my-3">
