@@ -80,3 +80,4 @@ def eliminar(request, pk):
     recolector = get_object_or_404(Recolector, pk=pk)
     recolector.delete()
     messages.success(request, 'Borrado Correctamente')
+    return redirect('/')

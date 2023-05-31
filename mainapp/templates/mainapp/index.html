@@ -3,13 +3,21 @@
 
 {% block content %}
 {% load static %}
-  {% if messages %}
+{% if messages %}
     {% for message in messages %}
       <div class="alert alert-success">
-        {{message}}
+        <script>
+          Swal.fire({
+            "title":"Felicitaciones",
+            "text":"{{message}} ",
+            "icon":"success",
+            "confirmButtonColor":"#D91B5D"
+          })
+        </script>
       </div>
     {% endfor %}
-  {% endif %}
+{% endif %}
+
 
 <!-- ======= App Features Section ======= -->
 <section id="features" class="features">

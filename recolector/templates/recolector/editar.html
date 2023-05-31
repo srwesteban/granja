@@ -17,7 +17,8 @@
       })
       .then(function(result){
           if(result.isConfirmed){
-              window.location.href = "/eliminarproducto/"+id
+              window.location.href = "http://"+window.location.host+"/recolector/delete/"+id
+              //console.log(window.location.host+"/recolector/delete/"+id)
           }
       })
   }
@@ -38,7 +39,7 @@
       <div class="col-lg-6">
         
         <div class="form-group">
-          <h2>Datos Finca</h2>
+          <img src="{% static 'assets/img/reco1.jpeg' %}" class="img-fluid" alt="">
         </div>
         
         
@@ -69,18 +70,19 @@
             <input placeholder="Fecha nacimiento*" type="date" value="{{fecha_nacimiento|date:'Y-m-d'}}" class="form-control" name="fnacimiento" id="fnacimiento" min="2005-01-01" required>
           </div>
           
-        
-        </div>
-
-        <div class="text-center"><button type="submit">Editar</button></div>
+          <div class="text-center"><button type="submit">Editar </button></div>
         <a class="btn btn-primary me-1"
                                     onclick="eliminarProducto({{recolector.pk}})"
                                     role="button"
                                     aria-expanded="false"
                                     aria-controls="collapseExample"
                                     ><i class='bx bx-edit me-1' ></i>
-                                    Eliminar
+                                    Eliminar {{recolector.pk}}
         </a>
+        
+        </div>
+
+        
 
       {% comment %} <div class="my-3">
         <div class="loading">Loading</div>
