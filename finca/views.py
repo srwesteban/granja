@@ -125,3 +125,14 @@ def mostrarRecoleccion(request, pk):
         'fincaE': finca,
         'recolecciones':recolecciones
     })
+    
+def recibos(request,pk):
+    finca = Finca.objects.get(pk=pk)
+    litros = Recoleccion.objects.filter(finca=finca)
+    
+    return render(request, 'recoleccion/editar.html', {
+        'title': 'Facturas de Pedidos',
+        'fincaE': finca,
+        'litros':litros,
+    })
+

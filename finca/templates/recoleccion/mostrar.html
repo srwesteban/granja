@@ -11,7 +11,7 @@
         <p>Recoleccion</p>
       </div>
 
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
         <div class="swiper-wrapper">
             
             {% for recoleccion in recolecciones %}
@@ -19,10 +19,11 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               
-              <h3>{{recoleccion.cantidad}}</h3>
-              <h4>Direccion {{recoleccion.novedad}}</h4>
+              <h3>Litros: {{recoleccion.cantidad}}</h3>
+              <h4>Novedad: {{recoleccion.novedad}}</h4>
+              <h4>Finca: {{finca.nombre}}</h4>
               <p>
-                <i class='bx bxs-edit-alt' ></i> <a href="" class="get-started-btn">Ver Informacion</a><br>
+                <i class='bi bi-cash-coin' ></i> <a href="{% url 'recibosrecoleccion' recoleccion.pk %}" class="get-started-btn">Ver Factura</a><br>
               </p>
             </div>
         </div>

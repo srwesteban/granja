@@ -87,3 +87,4 @@ def eliminar(request, pk):
     productor = get_object_or_404(Productor, pk=pk)
     productor.delete()
     messages.success(request, 'Borrado Correctamente')
+    return redirect('/')
